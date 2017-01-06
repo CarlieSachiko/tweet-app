@@ -13,11 +13,11 @@
 
   <div class="field">
     <%= t.label :handle %><br>
-    <%= t.text_field :handle %>
+    <%= t.text_field :handle, :required => true %>
   </div>
   <div class="field">
     <%= t.label :content %><br>
-    <%= t.text_field :content %>
+    <%= t.text_field :content, :required => true%>
   </div>
   <div class="actions">
     <%= t.submit %>

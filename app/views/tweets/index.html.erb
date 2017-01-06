@@ -1,13 +1,17 @@
 <div class="container">
+<p id="notice"><%= notice %></p>
 
 <% @tweets.each do |tweet| %>
 
-<div class="panel panel-default">
-  <div class="panel-heading">@<%= tweet.handle %></div>
-  <div class="panel-body">
-    <%= tweet.content %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      @<%= link_to "#{tweet.handle}", tweet_path(tweet) %> &nbsp; &#183; &nbsp;
+      <span><%= tweet.created_at.strftime("%b %-d, %Y") %> at <%= tweet.updated_at.localtime.strftime("%l:%M %P") %></span>
+    </div>
+    <div class="panel-body">
+      <%= tweet.content %>
+    </div>
   </div>
-</div>
 
 <% end %>
 

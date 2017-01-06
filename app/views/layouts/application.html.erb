@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>TwitterApp</title>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -12,16 +13,16 @@
  <nav class="navbar navbar-fixed-top" role="navigation">
     <div class="navbar-header">
         <span class="navbar-brand">
-          <%= link_to image_tag("twitter_bird.png", height: "30"), tweets_path %>
+          <%= link_to image_tag("twitter_bird.png", height: "30", class: "logo"), tweets_path %>
         </span>
           <button type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
-              <span class="glyphicon glyphicon-pencil"></span>
+              <a href="/tweets/new"><span class="glyphicon glyphicon-pencil"></span></a>
           </button>
       </div>
     <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Create Tweet", new_tweet_path %></li>
+        <li><a href="/tweets/new">Create Tweet</a></li>
       </ul>
     </div>
   </nav>

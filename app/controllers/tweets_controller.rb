@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
 
-    before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   def index
     @tweets = Tweet.all
@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
 
   def update
     if @tweet.update_attributes(tweet_params)
-      redirect_to tweets_path
+      redirect_to tweets_path, notice: 'Tweet was sucessfully updated.'
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class TweetsController < ApplicationController
 
   def destroy
     @tweet.destroy
-    redirect_to tweet_path, notice: 'Tweet was successfully deleted.'
+    redirect_to tweets_path, notice: 'Tweet was successfully deleted.'
   end
 
   private

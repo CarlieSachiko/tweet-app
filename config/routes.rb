@@ -10,9 +10,13 @@ Rails.application.routes.draw do
 
   get '/tweets/:id/edit' => 'tweets#edit', as: :edit_tweet
 
-  patch '/tweets/:id/edit' => 'tweets#update'
+  patch '/tweets/:id' => 'tweets#update'
 
-  delete '/tweets/:id' => 'tweets#destroy'
+  delete '/tweets/:id' => 'tweets#destroy', as: :delete_tweet
+
+  root 'pages#show', page: 'home'
+
+  get '/pages/:page' => 'pages#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
