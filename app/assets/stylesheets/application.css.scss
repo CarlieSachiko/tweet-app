@@ -10,9 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require rails_bootstrap_forms
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 
 body {
   padding-top: 30px;
@@ -42,22 +47,32 @@ pre {
   font-size: 11px;
 }
 
-/*.logo {
-  display: inline-block;
-  float: none;
+.logo {
+  margin: 5px 10px;
   vertical-align: middle;
-  border: black 1px solid;
-}*/
+  // border: black 1px solid;
+}
+
+.nav {
+  vertical-align: middle;
+  font-size: 20px;
+  // margin-top: 10px;
+  // background-color: grey;
+}
+
+.glyphicon {
+  font-size: 2em;
+}
 
 a {
-  color: #FE03D7;
+  color: #03AEE7;
 
 /*  &:visited {
     color: #666;
   }*/
 
   &:hover {
-    color: #09BCF8;
+    color: #03AEE7;
   }
 }
 
@@ -101,3 +116,4 @@ div {
     list-style: square;
   }
 }
+

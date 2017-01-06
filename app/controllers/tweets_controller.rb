@@ -4,6 +4,13 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all
+    if params[:sort]
+      @tweets = Tweet.order(params[:sort])
+      # if params[:sort] == handle
+        # @tweets.order(:handle)
+        # redirect_to "/tweets"
+      # end
+    end
   end
 
   def new

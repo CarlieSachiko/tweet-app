@@ -4,7 +4,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     @<%= @tweet.handle %> &nbsp; &#183; &nbsp;
-    <span><%= @tweet.updated_at.strftime("%b %-d, %Y") %> at <%= @tweet.updated_at.localtime.strftime("%l:%M %p") %></span>
+    <span><%= @tweet.updated_at.strftime("%b %-d, %Y") %> at <%= @tweet.updated_at.localtime.strftime("%l:%M %P") %></span>
   </div>
   <div class="panel-body">
     <%= @tweet.content %>

@@ -1,6 +1,12 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
+<%= link_to "Sort by Handle", :sort => "handle" %> |
+<%= link_to "Sort by Date", :sort => "updated_at" %>
+
+<br>
+<br>
+
 <% @tweets.each do |tweet| %>
 
   <div class="panel panel-default">
