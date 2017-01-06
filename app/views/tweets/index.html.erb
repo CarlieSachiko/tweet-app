@@ -1,1 +1,14 @@
-<h1>Twitter</h1>
+<div class="container">
+
+<% @tweets.each do |tweet| %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">@<%= tweet.handle %></div>
+  <div class="panel-body">
+    <%= tweet.content %>
+  </div>
+</div>
+
+<% end %>
+
+</div>
