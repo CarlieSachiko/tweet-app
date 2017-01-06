@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
-  resources :tweets
+  # resources :tweets
+  get '/tweets' => 'tweets#index'
+
+  get '/tweets/new' => 'tweets#new', as: :new_tweet
+
+  get '/tweets/:id' => 'tweets#show', as: :tweet
+
+  post '/tweets' => 'tweets#create'
+
+  get '/tweets/:id/edit' => 'tweets#edit', as: :edit_tweet
+
+  patch '/tweets/:id/edit' => 'tweets#update'
+
+  delete '/tweets/:id' => 'tweets#destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
