@@ -1,0 +1,3 @@
+class TweetsContoller < ApplicationController
+
+end
