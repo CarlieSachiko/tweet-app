@@ -3,9 +3,10 @@ class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   def index
-    @tweets = Tweet.all
     if params[:sort]
       @tweets = Tweet.order(params[:sort])
+    else
+      @tweets = Tweet.all
       # if params[:sort] == handle
         # @tweets.order(:handle)
         # redirect_to "/tweets"
