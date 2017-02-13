@@ -1,24 +1,24 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<%= link_to "Sort by Handle", :sort => "handle" %> |
-<%= link_to "Sort by Date", :sort => "updated_at" %>
+  <%= link_to "Sort by Handle", :sort => "handle" %> |
+  <%= link_to "Sort by Date", :sort => "updated_at" %>
 
-<br>
-<br>
+  <br>
+  <br>
 
-<% @tweets.each do |tweet| %>
+  <% @tweets.each do |tweet| %>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      @<%= link_to "#{tweet.handle}", tweet_path(tweet) %> &nbsp; &#183; &nbsp;
-      <span><%= tweet.updated_at.strftime("%b %-d, %Y") %> at <%= tweet.updated_at.localtime.strftime("%l:%M %P") %></span>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        @<%= link_to "#{tweet.handle}", tweet_path(tweet) %> &nbsp; &#183; &nbsp;
+        <span><%= tweet.updated_at.strftime("%b %-d, %Y") %> at <%= tweet.updated_at.localtime.strftime("%l:%M %P") %></span>
+      </div>
+      <div class="panel-body">
+        <%= tweet.content %>
+      </div>
     </div>
-    <div class="panel-body">
-      <%= tweet.content %>
-    </div>
-  </div>
 
-<% end %>
+  <% end %>
 
 </div>

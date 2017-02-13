@@ -1,6 +1,8 @@
 <div class="container">
 <p id="notice"><%= notice %></p>
 
+<%= image_tag(@tweet.image.url) %>
+
 <div class="panel panel-default">
   <div class="panel-heading">
     @<%= @tweet.handle %> &nbsp; &#183; &nbsp;
